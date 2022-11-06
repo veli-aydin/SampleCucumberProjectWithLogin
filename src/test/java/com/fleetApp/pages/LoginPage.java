@@ -130,5 +130,11 @@ public class LoginPage extends BasePage {
         return usernameField.getAttribute("validationMessage");
 
     }
+
+    public String fillOutWarningMessage2(){
+
+        return passwordField.getAttribute("validationMessage");
+
+    }
 }
 

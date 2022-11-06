@@ -1,3 +1,4 @@
+
 Feature: Navigation Menu
 
   Scenario Outline: Navigate to <module>-<subModule>

@@ -19,4 +19,7 @@ public class WarningMessagePage {
 
     @FindBy(xpath = "//div[@class='alert alert-warn']")
     public WebElement unableToSendTheEmail ;
+
+    @FindBy(xpath = "//*[@id=\"login-form\"]/fieldset/div[1]/div")
+    public WebElement invalidUsernameOrPassword;
 }

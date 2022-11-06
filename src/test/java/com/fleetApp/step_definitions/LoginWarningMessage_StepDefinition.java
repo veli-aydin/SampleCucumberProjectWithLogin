@@ -2,6 +2,7 @@ package com.fleetApp.step_definitions;
 
 import com.fleetApp.pages.LoginPage;
 import com.fleetApp.pages.WarningMessagePage;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -18,14 +19,21 @@ public class LoginWarningMessage_StepDefinition {
     @Then("{string} message should be displayed for invalid credentials")
     public void message_should_be_displayed_for_invalid_credentials(String expectedMessage) {
 
-        String actualMessage = warningMessagePage.unableToSendTheEmail.getText();
+        String actualMessage = warningMessagePage.invalidUsernameOrPassword.getText();
 
         Assert.assertEquals("Message do not match", expectedMessage, actualMessage);
     }
 
-    @Then("{string} message should be displayed for empty credentials")
-    public void messageShouldBeDisplayedForEmptyCredentials(String expectedMessage) {
+    @Then("{string} message should be displayed for empty username credentials")
+    public void messageShouldBeDisplayedForEmptyUsernameCredentials(String expectedMessage) {
 
         Assert.assertEquals(expectedMessage, loginPage.fillOutWarningMessage());
     }
+
+    @Then("{string} message should be displayed for empty password credentials")
+    public void messageShouldBeDisplayedForEmptyPasswordCredentials(String expectedMessage) {
+
+        Assert.assertEquals(expectedMessage, loginPage.fillOutWarningMessage2());
+    }
 }
+
