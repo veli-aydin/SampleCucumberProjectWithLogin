@@ -18,4 +18,7 @@ public class ForgotPasswordPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement requestBtn;
 
+    @FindBy(xpath = "//div[@class='alert alert-warn']")
+    public WebElement unableToSendTheEmail ;
+
 }

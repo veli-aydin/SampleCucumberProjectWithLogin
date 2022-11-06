@@ -40,10 +40,13 @@ public class ForgotPasswordPage_StepDefinitions {
 
         forgotPasswordPage.requestBtn.click();
     }
-    @Then("The user should get email")
-    public void theUserShouldGetEmail() {
 
-        System.out.println("Ask dear Yakup hocam");
-        Assert.fail();
+    @Then("The user should see the {string} message")
+    public void theUserShouldSeeTheMessage(String arg0) {
+
+        String expectedText = "Email was sent";
+        String actualText = forgotPasswordPage.unableToSendTheEmail.getText();
+        Assert.assertEquals(expectedText, actualText);
+
     }
 }

@@ -1,4 +1,4 @@
-
+@wip
 Feature: Login 4a 4b - Forgot Password Page
 
   AC: User lands on the ‘Forgot Password’ page after clicking on the "Forgot your password?" link
@@ -16,7 +16,7 @@ Feature: Login 4a 4b - Forgot Password Page
     When The user clicks on the "Forgot Your Password"
     And The user enters own username
     And The user clicks Request Btn
-    Then  The user should get email
+    Then The user should see the "Email was sent" message
 
 
 
