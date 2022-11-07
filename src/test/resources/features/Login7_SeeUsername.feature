@@ -1,4 +1,4 @@
-@wip
+
 Feature: Login-7 Verify username functionality
 
   AC: User can see his own "username" (what he types in the username field)
