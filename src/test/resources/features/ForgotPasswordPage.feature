@@ -1,4 +1,4 @@
-@wip
+
 Feature: Login 4a 4b - Forgot Password Page
 
   AC: User lands on the ‘Forgot Password’ page after clicking on the "Forgot your password?" link

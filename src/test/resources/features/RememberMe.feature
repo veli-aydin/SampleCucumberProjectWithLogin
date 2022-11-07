@@ -12,7 +12,7 @@ Feature: US-05 Remember me on this computer functionality
 
       When User clicks Remember Me box
       And User enters credentials and clicks login btn
-      And User lands on DashBoard Page
+      And User lands on Home Page
       And User logs out
       Then User should see the credentials already entered in the login page in the next attempt
 

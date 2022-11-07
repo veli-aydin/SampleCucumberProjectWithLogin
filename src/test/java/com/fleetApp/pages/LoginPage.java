@@ -26,7 +26,7 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//a[.='Forgot your password?']")
     private WebElement forgotPasswordLink;
 
-    @FindBy(xpath = "//span[.='Remember me on this computer']")
+    @FindBy(xpath = "//input[@id='remember_me']")
     public WebElement rememberMeBox;
 
     //---methods-----------------

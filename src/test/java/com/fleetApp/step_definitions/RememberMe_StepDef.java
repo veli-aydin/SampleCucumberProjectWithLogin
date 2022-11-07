@@ -21,13 +21,13 @@ public class RememberMe_StepDef {
 
         loginPage.loginAsDriver();
     }
-    @When("User lands on DashBoard Page")
-    public void user_lands_on_dash_board_page() {
+    @And("User lands on Home Page")
+    public void user_lands_on_home_page() {
 
         Assert.assertEquals("Dashboard", Driver.get().getTitle());
 
     }
-    @When("User logs out")
+    @And("User logs out")
     public void user_logs_out() {
 
         homePage.johnDoeClick.click();
