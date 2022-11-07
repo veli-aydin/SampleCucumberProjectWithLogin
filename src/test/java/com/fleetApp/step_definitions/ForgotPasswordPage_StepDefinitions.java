@@ -41,12 +41,16 @@ public class ForgotPasswordPage_StepDefinitions {
         forgotPasswordPage.requestBtn.click();
     }
 
-    @Then("The user should see the {string} message")
-    public void theUserShouldSeeTheMessage(String arg0) {
 
-        String expectedText = "Email was sent";
+    @Then("The user should not see the {string} message")
+    public void theUserShouldNotSeeTheMessage(String message) {
+
         String actualText = forgotPasswordPage.unableToSendTheEmail.getText();
-        Assert.assertEquals(expectedText, actualText);
+
+        System.out.println("Expected message: "+message);
+        System.out.println("Actual message: "+actualText);
+
+        Assert.assertNotEquals(actualText, message);
 
     }
 }

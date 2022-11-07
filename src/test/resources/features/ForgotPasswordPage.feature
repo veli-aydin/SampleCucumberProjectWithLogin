@@ -16,7 +16,7 @@ Feature: Login 4a 4b - Forgot Password Page
     When The user clicks on the "Forgot Your Password"
     And The user enters own username
     And The user clicks Request Btn
-    Then The user should see the "Email was sent" message
+    Then The user should not see the "Unable to send the email." message
 
 
 
