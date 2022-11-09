@@ -1,11 +1,11 @@
-
-Feature: Login 2a-2b - Warning Messages While logging in
+@TRAD-866
+Feature: Warning messages while logging in
 
   Background:
     Given The user is on the login page
 
-
-  Scenario Outline: The user can not login with invalid credentials
+  @TRAD-863
+  Scenario Outline: "Invalid username or password." message functionality
     When The user tries to login with invalid "<username>" and "<password>" credentials
     Then "Invalid user name or password." message should be displayed for invalid credentials
     Examples:
@@ -14,22 +14,19 @@ Feature: Login 2a-2b - Warning Messages While logging in
       | user1    | aad3412!    |
       | asdaw    | sdf323'+%   |
 
-
-  Scenario Outline: The user try to login with empty field
-
+  @TRAD-864
+  Scenario Outline: "Please fill out this field." message for username field
     When The user tries to login with invalid "<username>" and "<password>" credentials
     Then "Lütfen bu alanı doldurun." message should be displayed for empty username credentials
     Examples:
-      | username       | password    |
-      |                | UserUser123 |
-      |                |             |
+      | username | password    |
+      |          | UserUser123 |
+      |          |             |
 
-  Scenario Outline: The user try to login with empty field
-
+  @TRAD-865
+  Scenario Outline: "Please fill out this field." message for password field
     When The user tries to login with invalid "<username>" and "<password>" credentials
     Then "Lütfen bu alanı doldurun." message should be displayed for empty password credentials
     Examples:
-      | username       | password    |
-      | storemanager51 |             |
-
-
+      | username       | password |
+      | storemanager51 |          |

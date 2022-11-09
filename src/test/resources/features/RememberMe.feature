@@ -1,22 +1,13 @@
-
-Feature: US-05 Remember me on this computer functionality
+@TRAD-840
+Feature: Remember me checkbox functionality
 
   Background:
     Given The user is on the login page
 
-
-
-    Scenario: User should see his/her credentials already entered
-                      in the login page after Remember me on
-                      this computer checkbox is clicked
-
-      When User clicks Remember Me box
-      And User enters credentials and clicks login btn
-      And User lands on Home Page
-      And User logs out
-      Then User should see the credentials already entered in the login page in the next attempt
-
-
-
-
-
+  @TRAD-838
+  Scenario: Remember me checkbox functionality
+    When User clicks Remember Me box
+    And User enters credentials and clicks login btn
+    And User lands on Home Page
+    And User logs out
+    Then User should see own credentials

@@ -33,8 +33,8 @@ public class RememberMe_StepDef {
         homePage.johnDoeClick.click();
         homePage.logoutBtn.click();
     }
-    @Then("User should see the credentials already entered in the login page in the next attempt")
-    public void user_should_see_the_credentials_already_entered_in_the_login_page_in_the_next_attempt() {
+    @Then("User should see own credentials")
+    public void user_should_see_own_credentials() {
 
         String username = "user1";
         loginPage.inputVerify(username);

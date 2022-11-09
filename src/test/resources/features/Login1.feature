@@ -1,5 +1,5 @@
 @TRAD-807
-Feature: Login 1 - Without any parameter
+Feature: Login with valid credentials
 
   Background:
     Given The user is on the login page
