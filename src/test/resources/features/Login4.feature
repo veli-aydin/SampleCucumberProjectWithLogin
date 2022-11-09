@@ -17,7 +17,7 @@ Feature: Warning messages while logging in
   @TRAD-864
   Scenario Outline: "Please fill out this field." message for username field
     When The user tries to login with invalid "<username>" and "<password>" credentials
-    Then "Lütfen bu alanı doldurun." message should be displayed for empty username credentials
+    Then "Please fill out this field." message should be displayed for empty username credentials
     Examples:
       | username | password    |
       |          | UserUser123 |
@@ -26,7 +26,7 @@ Feature: Warning messages while logging in
   @TRAD-865
   Scenario Outline: "Please fill out this field." message for password field
     When The user tries to login with invalid "<username>" and "<password>" credentials
-    Then "Lütfen bu alanı doldurun." message should be displayed for empty password credentials
+    Then "Please fill out this field." message should be displayed for empty password credentials
     Examples:
       | username       | password |
       | storemanager51 |          |

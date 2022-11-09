@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
 		features = "src/test/resources/features",
 		glue = "com/fleetApp/step_definitions",
 		dryRun = false,
-		tags = "@TRAD-868"
+		tags = "@TRAD-840"
 		)
 
 public class CukesRunner {
